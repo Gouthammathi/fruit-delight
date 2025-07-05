@@ -102,7 +102,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-[#18492B] text-white p-3 rounded-full shadow-soft-lg hover:bg-[#18492B] transition-all duration-300 hover:scale-110 z-40"
+        className="fixed bottom-6 right-6 bg-[#18492B] text-[#FDF8E1] p-3 rounded-full shadow-soft-lg hover:bg-[#18492B] transition-all duration-300 hover:scale-110 z-40"
       >
         <span className="inline-flex items-center justify-center bg-[#18492B] rounded-full p-2 shadow-md transition-all duration-300">
           <FaArrowUp className="h-6 w-6 text-accent" />

@@ -38,7 +38,7 @@ const Products = ({ onAddToCart }) => (
             <h2 className="text-2xl font-bold text-accent mb-2 font-brand">This Week's Special</h2>
             <p className="text-primary/80">Try our <span className="font-semibold text-primary">Berry Blast</span> combo for a sweet antioxidant boost!</p>
           </div>
-          <button className="mt-4 md:mt-0 px-6 py-2 rounded-full bg-accent text-white font-bold shadow hover:bg-accent-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent" onClick={() => onAddToCart(products[1])}>Order Berry Blast</button>
+          <button className="mt-4 md:mt-0 px-6 py-2 rounded-full bg-accent text-[#FDF8E1] font-bold shadow hover:bg-accent-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent" onClick={() => onAddToCart(products[1])}>Order Berry Blast</button>
         </div>
       </section>
       {/* Product Grid */}

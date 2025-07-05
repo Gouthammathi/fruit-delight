@@ -9,7 +9,6 @@ import farmFresh from '../assets/hero/Farm-Fresh.png';
 import healthyFood from '../assets/hero/Healthy Food.png';
 import quickDelivery from '../assets/hero/Quick Delivery.png';
 import group2 from '../assets/hero/Group 2.png';
-import group3 from '../assets/hero/Group 3.png';
 
 const leafVariants = {
   hidden: (custom) => ({
@@ -102,10 +101,9 @@ const HeroSection = () => {
       />
 
       {/* Floating Badges/Assets */}
-      <img src={healthyFood} alt="Healthy Food" className="absolute top-16 left-1/4 w-16 sm:w-28 rotate-[-15deg] z-30 transition-transform duration-300 hover:-translate-y-3 hover:scale-105 hover:drop-shadow-2xl" style={{filter:'drop-shadow(0 2px 8px #0002)'}} />
-      <img src={farmFresh} alt="Farm Fresh" className="absolute top-[30%] left-[10%] w-16 sm:w-32 rotate-[-8deg] z-30 transition-transform duration-300 hover:-translate-y-3 hover:scale-105 hover:drop-shadow-2xl" style={{filter:'drop-shadow(0 2px 8px #0002)'}} />
+      <img src={healthyFood} alt="Healthy Food" className="absolute top-100 left-1/4 w-16 sm:w-28 rotate-[-20deg] z-30 transition-transform duration-300 hover:-translate-y-3 hover:scale-105 hover:drop-shadow-2xl" style={{filter:'drop-shadow(0 2px 8px #0002)'}} />
+      {/* <img src={farmFresh} alt="Farm Fresh" className="absolute top-[30%] left-[20%] w-16 sm:w-32 rotate-[-8deg] z-30 transition-transform duration-300 hover:-translate-y-3 hover:scale-105 hover:drop-shadow-2xl" style={{filter:'drop-shadow(0 2px 8px #0002)'}} /> */}
       <img src={quickDelivery} alt="Quick Delivery" className="absolute top-1/2 right-1/4 w-16 sm:w-28 rotate-[10deg] z-30 transition-transform duration-300 hover:-translate-y-3 hover:scale-105 hover:drop-shadow-2xl" style={{filter:'drop-shadow(0 2px 8px #0002)'}} />
-      <img src={group3} alt="Group 3" className="hidden sm:block absolute top-10 right-1/4 w-16 sm:w-24 rotate-[-10deg] z-30 transition-transform duration-300 hover:-translate-y-3 hover:scale-105 hover:drop-shadow-2xl" style={{filter:'drop-shadow(0 2px 8px #0002)'}} />
 
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
@@ -150,16 +148,16 @@ const HeroSection = () => {
               />
             </div>
             {/* Subheading below everything */}
-            <p className="mt-8 sm:mt-16 text-base xs:text-lg sm:text-2xl font-thanks-autumn text-[#D6DC64] tracking-wide drop-shadow-lg max-w-xs sm:max-w-xl mx-auto text-center">
-              Enjoy a healthier life with <br/><span className="font-magilio text-[#7ED957] drop-shadow-md text-outline-cream">nutrient-rich, freshly-cut</span> <br/>fruit boxes.
+            <p className="mt-8 sm:mt-16 text-base xs:text-lg sm:text-4xl font-thanks-autumn text-[#D6DC64] tracking-wide drop-shadow-lg max-w-xs sm:max-w-xl mx-auto text-center">
+              Enjoy a healthier life with <br/><span className="font-magilio text-[#F88B42] drop-shadow-md text-outline-cream">Nutrient-Rich, Freshly-Cut</span> <br/>Fruit Boxes.
             </p>
             <div className="mt-6 sm:mt-8 flex justify-center">
               <a 
                 href="#plans" 
-                className="inline-flex items-center gap-2 sm:gap-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-md border border-orange-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400 group text-sm sm:text-base"
+                className="inline-flex items-center gap-2 sm:gap-3 bg-orange-500 hover:bg-orange-600 text-[#FDF8E1] font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-md border border-orange-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400 group text-sm sm:text-base"
               >
                 Order Now
-                <span className="inline-flex items-center justify-center bg-white rounded-full p-1 ml-1 shadow-sm transition-all duration-300 group-hover:bg-orange-100">
+                <span className="inline-flex items-center justify-center bg-[#FDF8E1] rounded-full p-1 ml-1 shadow-sm transition-all duration-300 group-hover:bg-orange-100">
                   <FaArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500 group-hover:text-orange-600 transition-all duration-300" />
                 </span>
               </a>

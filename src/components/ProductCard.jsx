@@ -26,7 +26,7 @@ const ProductCard = ({ image, name, price, description, onAddToCart }) => (
       </motion.div>
       <button
         onClick={onAddToCart}
-        className="mt-4 w-full px-4 py-2 rounded-full bg-accent text-white font-semibold shadow hover:bg-accent-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent"
+        className="mt-4 w-full px-4 py-2 rounded-full bg-accent text-[#FDF8E1] font-semibold shadow hover:bg-accent-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent"
       >
         Add to Cart
       </button>

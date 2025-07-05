@@ -151,7 +151,7 @@ const FruitGallery = () => {
               className="max-w-full max-h-full rounded-2xl shadow-soft-lg"
             />
             <button
-              className="absolute top-6 right-6 text-white hover:text-accent transition-colors"
+              className="absolute top-6 right-6 text-[#FDF8E1] hover:text-accent transition-colors"
               onClick={closeModal}
             >
               <span className="inline-flex items-center justify-center bg-[#18492B] rounded-full p-2 shadow-md transition-all duration-300">

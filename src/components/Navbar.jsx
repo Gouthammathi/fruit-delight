@@ -182,7 +182,7 @@ const Navbar = () => {
             </button>
           ))}
           <button
-            className="bg-[#F88A42] shadow-lg text-white font-bold px-6 py-2 rounded-full hover:bg-[#E0793A] hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#F88A42]"
+            className="bg-[#F88A42] shadow-lg text-[#FDF8E1] font-bold px-6 py-2 rounded-full hover:bg-[#E0793A] hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#F88A42]"
             onClick={() => scrollToSection('contact')}
           >
             Contact
@@ -228,7 +228,7 @@ const Navbar = () => {
               ))}
               <motion.button
                 variants={menuItemVariants}
-                className="bg-[#F88A42] text-white font-bold px-6 py-2 rounded-full hover:bg-[#E0793A] hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#F88A42]"
+                className="bg-[#F88A42] text-[#FDF8E1] font-bold px-6 py-2 rounded-full hover:bg-[#E0793A] hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#F88A42]"
                 onClick={() => scrollToSection('contact')}
               >
                 Contact

@@ -194,7 +194,7 @@ const FruitShowcase = ({ fruits, onAddToCart }) => {
                 </div>
                 
                 {/* Price Badge */}
-                <div className="absolute top-4 right-4 bg-accent text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                <div className="absolute top-4 right-4 bg-accent text-[#FDF8E1] px-4 py-2 rounded-full font-bold text-lg shadow-lg">
                   ₹{currentFruit.price}
                 </div>
               </div>
@@ -306,7 +306,7 @@ const FruitShowcase = ({ fruits, onAddToCart }) => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-semibold text-primary text-lg">{benefit.text}</h4>
-                        <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="bg-accent text-[#FDF8E1] px-3 py-1 rounded-full text-sm font-semibold">
                           {benefit.value}
                         </span>
                       </div>
@@ -338,7 +338,7 @@ const FruitShowcase = ({ fruits, onAddToCart }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => onAddToCart(currentFruit)}
-            className="w-full bg-gradient-to-r from-accent to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-accent-dark hover:to-pink-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+            className="w-full bg-gradient-to-r from-accent to-pink-600 text-[#FDF8E1] py-4 rounded-xl font-bold text-lg hover:from-accent-dark hover:to-pink-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
           >
             <FaShoppingCart className="text-xl" />
             Add {currentFruit.name} to Cart

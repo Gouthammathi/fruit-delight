@@ -23,17 +23,17 @@ const StorySection = () => {
             <h2 className="font-brand text-4xl md:text-5xl font-bold text-primary" style={{ color: '#FDF8E1' }}>
               Our Passion for Freshness
             </h2>
-            <p className="mt-4 text-lg text-secondary leading-relaxed">
+            <p className="mt-4 text-lg text-[#FDF8E1] leading-relaxed">
               It all began with a simple idea: make healthy eating easy and delightful. We saw that people loved fresh fruit but lacked the time for the daily chore of washing, cutting, and preparing.
             </p>
-            <p className="mt-4 text-lg text-secondary leading-relaxed">
+            <p className="mt-4 text-lg text-[#FDF8E1] leading-relaxed">
               Today, we're a passionate team dedicated to delivering that "just-cut" freshness right to your door, making nutritious choices an effortless part of your day.
             </p>
 
             {/* Values */}
-            <div className="mt-8 grid grid-cols-2 gap-6">
+            <div className="mt-8 grid grid-cols-2 gap-6 text-[#FDF8E1]">
               <div className="flex items-center gap-3">
-                <FaLeaf className="h-6 w-6 text-accent" />
+                <FaLeaf className="h-6 w-6 text-[#FDF8E1]" />
                 <span className="font-bold text-primary">Quality First</span>
               </div>
               <div className="flex items-center gap-3">

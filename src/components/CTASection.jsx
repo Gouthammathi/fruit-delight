@@ -11,7 +11,7 @@ const CTASection = () => (
       <div className="flex flex-col sm:flex-row gap-4">
         <motion.a
           href="#products"
-          className="px-8 py-3 rounded-full bg-accent text-white font-bold text-lg shadow hover:bg-accent-dark transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent"
+          className="px-8 py-3 rounded-full bg-accent text-[#FDF8E1] font-bold text-lg shadow hover:bg-accent-dark transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.97 }}
         >
@@ -19,7 +19,7 @@ const CTASection = () => (
         </motion.a>
         <motion.a
           href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer"
-          className="px-8 py-3 rounded-full bg-primary text-white font-bold text-lg shadow flex items-center justify-center gap-2 hover:bg-primary-dark transition-all duration-200"
+          className="px-8 py-3 rounded-full bg-primary text-[#FDF8E1] font-bold text-lg shadow flex items-center justify-center gap-2 hover:bg-primary-dark transition-all duration-200"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.97 }}
         >
