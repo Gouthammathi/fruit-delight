@@ -10,7 +10,6 @@ const Footer = () => {
     { name: 'Instagram', icon: FaInstagram, href: '#' },
     { name: 'WhatsApp', icon: FaWhatsapp, href: 'https://wa.me/918712220453' },
     { name: 'Facebook', icon: FaFacebook, href: '#' },
-    { name: 'Twitter', icon: FaTwitter, href: '#' },
   ];
 
   const footerLinks = {
@@ -90,13 +89,11 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-neutral-light pt-8 flex flex-col sm:flex-row items-center justify-between">
-          <div className="text-sm text-[#13381A]/80 text-center sm:text-left">
-            <p>&copy; {new Date().getFullYear()} Fruit Delight. All Rights Reserved.</p>
-            <p>Email: <a href="mailto:fruitdelight0102@gmail.com" className="hover:text-accent">fruitdelight0102@gmail.com</a></p>
-          </div>
-          <div className="flex gap-4 mt-4 sm:mt-0 text-sm">
+        <div className="mt-16 border-t border-neutral-light pt-10 flex flex-col items-center justify-center text-center gap-3">
+          <p className="text-base font-semibold text-[#13381A]/90">&copy; 2025 Nihira Enterprises. All Rights Reserved.</p>
+          <div className="flex gap-4 mt-2 text-sm justify-center items-center">
             <a href="#" className="text-[#13381A]/80 hover:text-accent">Privacy Policy</a>
+            <span className="h-4 border-l border-[#13381A]/30"></span>
             <a href="#" className="text-[#13381A]/80 hover:text-accent">Terms of Service</a>
           </div>
         </div>

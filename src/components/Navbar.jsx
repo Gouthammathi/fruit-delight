@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaApple, FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
@@ -7,9 +7,35 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [contentBgColor, setContentBgColor] = useState('#194E2E');
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const navRef = useRef(null);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+
+  // Debounced scroll handler
+  const debouncedScrollHandler = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    
+    // Always show header at the top
+    if (currentScrollY <= 0) {
+      setIsVisible(true);
+      setLastScrollY(currentScrollY);
+      return;
+    }
+    
+    // Determine scroll direction and show/hide header
+    const isScrollingDown = currentScrollY > lastScrollY;
+    const isScrollingUp = currentScrollY < lastScrollY;
+    
+    if (isScrollingDown && isVisible) {
+      setIsVisible(false);
+    } else if (isScrollingUp && !isVisible) {
+      setIsVisible(true);
+    }
+    
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY, isVisible]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +49,15 @@ const Navbar = () => {
         // On home page, check which section we're over
         const sections = ['home', 'features', 'plans', 'lifecycle', 'benefits', 'gallery', 'story', 'testimonials', 'contact'];
         const lightSections = ['contact']; // Sections with light background
+        const darkTextSections = ['features', 'lifecycle', 'benefits', 'testimonials']; // Sections where text should be dark
         
         for (let i = sections.length - 1; i >= 0; i--) {
           const element = document.getElementById(sections[i]);
           if (element && element.offsetTop <= scrollPosition + 100) {
             if (lightSections.includes(sections[i])) {
               newContentBgColor = '#FDF8E1'; // Light beige background
+            } else if (darkTextSections.includes(sections[i])) {
+              newContentBgColor = '#194528'; // Dark green for sections with dark text
             } else {
               newContentBgColor = '#194E2E'; // Dark green background
             }
@@ -43,17 +72,36 @@ const Navbar = () => {
       setContentBgColor(newContentBgColor);
     };
     
+    // Throttled scroll handler for header visibility
+    let ticking = false;
+    const throttledScrollHandler = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          debouncedScrollHandler();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', throttledScrollHandler);
+    
     // Initial call to set correct color
     handleScroll();
     
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomePage]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledScrollHandler);
+    };
+  }, [isHomePage, debouncedScrollHandler]);
 
   // Determine text color based on content background
   const getTextColor = () => {
     if (contentBgColor === '#13381A' || contentBgColor === '#194E2E') {
       return 'text-[#FDF8E1]'; // Beige text on dark content backgrounds
+    } else if (contentBgColor === '#194528') {
+      return 'text-[#194528]'; // Dark green text on sections with dark text
     } else {
       return 'text-[#13381A]'; // Dark green text on light content backgrounds
     }
@@ -84,11 +132,12 @@ const Navbar = () => {
   const navClasses = `
     fixed top-3 left-1/2 z-50 w-4/5 max-w-8xl -translate-x-1/2 
     rounded-2xl px-3 py-1 
-    border transition-all duration-300 bg-transparent
+    border transition-all duration-300 ease-in-out bg-transparent
     ${isScrolled || isOpen 
       ? 'backdrop-blur-lg border-white/20 shadow-lg scale-105 ring-2 ring-accent/10' 
       : 'border-transparent shadow-glass'}
     ${isOpen ? 'rounded-b-l' : ''}
+    ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
   `;
 
   const mobileMenuClasses = `
@@ -102,8 +151,8 @@ const Navbar = () => {
   return (
     <motion.nav
       ref={navRef}
-      initial={{ y: -40, opacity: 0, scale: 0.98 }}
-      animate={{ y: 0, opacity: 1, scale: isScrolled ? 1.01 : 1 }}
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 120, damping: 16 }}
       className={navClasses}
     >

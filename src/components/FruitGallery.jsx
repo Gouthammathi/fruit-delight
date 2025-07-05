@@ -105,10 +105,10 @@ const FruitGallery = () => {
     <section id="gallery" className="py-8 sm:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-16">
-          <h2 className="font-brand text-2xl sm:text-4xl md:text-5xl font-bold text-primary">
+          <h2 className="font-brand text-2xl sm:text-4xl md:text-5xl font-bold text-primary" style={{ color: '#FDF8E1' }}>
             A Feast for Your Eyes
           </h2>
-          <p className="mt-2 sm:mt-4 text-base sm:text-lg text-secondary max-w-2xl mx-auto">
+          <p className="mt-2 sm:mt-4 text-base sm:text-lg text-secondary max-w-2xl mx-auto" style={{ color: '#FDF8E1' }}>
             Explore the vibrant colors and freshness of our handcrafted fruit boxes.
           </p>
         </div>

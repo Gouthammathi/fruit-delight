@@ -429,10 +429,10 @@ const FruitBenefits = ({ onAddToCart }) => {
     <section id="benefits" className="py-8 sm:py-24 bg-[#FDF8E1]">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-16">
-          <h2 className="font-brand text-2xl sm:text-4xl md:text-5xl font-bold text-primary">
+          <h2 className="font-brand text-2xl sm:text-4xl md:text-5xl font-bold" style={{ color: '#18492B' }}>
             Fruit Benefits
           </h2>
-          <p className="mt-2 sm:mt-4 text-base sm:text-lg text-secondary max-w-2xl mx-auto">
+          <p className="mt-2 sm:mt-4 text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#18492B' }}>
             Discover the amazing health benefits of our fresh fruit selection.
           </p>
         </div>

@@ -20,7 +20,7 @@ const StorySection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h2 className="font-brand text-4xl md:text-5xl font-bold text-primary">
+            <h2 className="font-brand text-4xl md:text-5xl font-bold text-primary" style={{ color: '#FDF8E1' }}>
               Our Passion for Freshness
             </h2>
             <p className="mt-4 text-lg text-secondary leading-relaxed">
